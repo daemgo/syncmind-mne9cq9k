@@ -45,7 +45,7 @@ export function Sidebar() {
       {/* Logo Area */}
       <div className="h-16 flex items-center justify-between px-4 border-b border-sidebar-border">
         {!collapsed && (
-          <span className="font-semibold text-sidebar-foreground">syncMind CRM</span>
+          <span className="font-semibold text-sidebar-foreground">CRM</span>
         )}
         <Button
           variant="ghost"
