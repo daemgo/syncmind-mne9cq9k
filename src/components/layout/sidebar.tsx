@@ -18,7 +18,7 @@ import {
 } from "lucide-react";
 
 const navItems = [
-  { label: "Dashboard", icon: LayoutDashboard, path: "/" },
+  { label: "工作台", icon: LayoutDashboard, path: "/" },
   { label: "客户管理", icon: Users, path: "/customer" },
   { label: "商机管理", icon: TrendingUp, path: "/opportunity" },
   { label: "合同管理", icon: FileText, path: "/contract" },
