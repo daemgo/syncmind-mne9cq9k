@@ -121,7 +121,7 @@ export function ContractFormDialog({
                 <SelectValue placeholder="请选择商机（可选）" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="">无</SelectItem>
+                <SelectItem value="none">无</SelectItem>
                 {customerOpportunities.map((o) => (
                   <SelectItem key={o.id} value={o.id}>
                     {o.name}
