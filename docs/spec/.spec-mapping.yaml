@@ -1,0 +1,86 @@
+# CRM Demo Specification Mapping
+
+## Project Overview
+- **Project**: syncMind CRM Demo
+- **Generated**: 2026-03-31
+- **Tech Stack**: TanStack Start + Vite, React, TypeScript, Tailwind CSS v4, shadcn/ui
+
+## Module Mapping
+
+### 1. Customer Management (客户管理)
+- **Types**: `/src/types/crm.ts` - Customer, CustomerStatus
+- **Mock Data**: `/src/mock/crm.ts` - 18 customers
+- **Components**:
+  - Filter: `/src/components/customer/customer-filter.tsx`
+  - Table: `/src/components/customer/customer-table.tsx`
+  - Detail: `/src/components/customer/customer-detail.tsx`
+  - Form Dialog: `/src/components/customer/customer-form-dialog.tsx`
+- **Routes**:
+  - List: `/src/routes/customer/index.tsx`
+  - Detail: `/src/routes/customer/$id.tsx`
+
+### 2. Opportunity Management (商机管理)
+- **Types**: `/src/types/crm.ts` - Opportunity, OpportunityStage
+- **Mock Data**: `/src/mock/crm.ts` - 16 opportunities
+- **Components**:
+  - Filter: `/src/components/opportunity/opportunity-filter.tsx`
+  - Table: `/src/components/opportunity/opportunity-table.tsx`
+  - Detail: `/src/components/opportunity/opportunity-detail.tsx`
+  - Form Dialog: `/src/components/opportunity/opportunity-form-dialog.tsx`
+- **Routes**:
+  - List: `/src/routes/opportunity/index.tsx`
+  - Detail: `/src/routes/opportunity/$id.tsx`
+
+### 3. Contract Management (合同管理)
+- **Types**: `/src/types/crm.ts` - Contract, ContractStatus
+- **Mock Data**: `/src/mock/crm.ts` - 15 contracts
+- **Components**:
+  - Filter: `/src/components/contract/contract-filter.tsx`
+  - Table: `/src/components/contract/contract-table.tsx`
+  - Detail: `/src/components/contract/contract-detail.tsx`
+  - Form Dialog: `/src/components/contract/contract-form-dialog.tsx`
+- **Routes**:
+  - List: `/src/routes/contract/index.tsx`
+  - Detail: `/src/routes/contract/$id.tsx`
+
+### 4. Follow-up Management (跟进记录)
+- **Types**: `/src/types/crm.ts` - Followup, FollowupType
+- **Mock Data**: `/src/mock/crm.ts` - 20 followups
+- **Components**:
+  - Filter: `/src/components/followup/followup-filter.tsx`
+  - Table: `/src/components/followup/followup-table.tsx`
+  - Detail: `/src/components/followup/followup-detail.tsx`
+  - Form Dialog: `/src/components/followup/followup-form-dialog.tsx`
+- **Routes**:
+  - List: `/src/routes/followup/index.tsx`
+  - Detail: `/src/routes/followup/$id.tsx`
+
+### 5. Dashboard (首页)
+- **Route**: `/src/routes/index.tsx`
+- **Features**:
+  - Stats Cards (customers, opportunities, contracts, new customers)
+  - Revenue trend chart (LineChart)
+  - Opportunity stage funnel (BarChart)
+  - Recent followups list
+  - Active opportunities list
+
+### 6. Layout
+- **Sidebar**: `/src/components/layout/sidebar.tsx` (collapsible)
+- **Root Layout**: `/src/routes/__root.tsx`
+
+### 7. Shared
+- **Types**: `/src/types/crm.ts`
+- **Mock Data**: `/src/mock/crm.ts`
+- **Dictionaries**: `/src/lib/dict.ts`
+
+## Data Dictionaries
+Defined in `/src/lib/dict.ts`:
+- `dict-customer-status`: potential, active, inactive
+- `dict-opportunity-stage`: initial, qualified, proposal, negotiation, won, lost
+- `dict-contract-status`: draft, pending, active, completed, terminated
+- `dict-followup-type`: call, email, visit, meeting
+- `dict-industry`: Multiple industries
+
+## Build Status
+- **Build**: PASSED
+- **Build Time**: ~5.69s (client) + ~1.02s (server)
